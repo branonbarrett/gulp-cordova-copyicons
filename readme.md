@@ -1,6 +1,6 @@
 # gulp-cordova-copyicons
 
-> Create a cordova project
+> Copy directory contents (i.e. res icons) to a cordova project platform res directory.
 
 ## Installation
 
@@ -50,7 +50,7 @@ $ cordova platform add android
 Type: `string`  
 Default: `android`
 
-The target platform to copy icon to.
+The target platform to copy icons to.
 
 ## Related
 
