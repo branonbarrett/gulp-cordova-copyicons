@@ -1,0 +1,41 @@
+{
+  "name": "gulp-cordova-copyicons",
+  "version": "0.0.1",
+  "description": "Copy res icon contents to cordova project",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamVerschueren/gulp-cordova-create.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpjs",
+    "cordova",
+    "create",
+    "build",
+    "gulp-cordova"
+  ],
+  "author": {
+    "name": "Branon Barrett",
+    "email": "branonbarrett@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamVerschueren/gulp-cordova-create/issues"
+  },
+  "homepage": "https://github.com/SamVerschueren/gulp-cordova-create",
+  "dependencies": {
+    "cordova-lib": "^6.0.0",
+    "gulp-util": "^3.0.4",
+    "mkdirp": "^0.5.0",
+    "through2": "^2.0.0",
+    "q": "^1.4.1",
+    "npc": "0.0.1"
+  },
+  "devDependencies": {
+    "xo": "*"
+  }
+}
