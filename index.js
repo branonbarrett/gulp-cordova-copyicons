@@ -39,13 +39,13 @@ module.exports = function (src, options) {
 		}).then(function (exists) {
 			if (!exists) {
 				// Add the android platform if it does not exist
-				gutil.log('gulp-cordova-copyicons', 'adding ' +  options.platform + ' platform');
+				gutil.log(gutil.colors.cyan('gulp-cordova-copyicons'), 'adding ' +  options.platform + ' platform');
 				return cordova.platforms('add', options.platform + (options.version ? ('@' + options.version) : ''));
 			}
 		}).then(function () {
 			// copy the res files
 			ncp(src, resPath, function (err) {
-				gutil.log('gulp-cordova-copyicons', 'copying res directory contents');
+				gutil.log(gutil.colors.cyan('gulp-cordova-copyicons'), 'copying directory contents to platform res directory');
 				if (err) {
 					throw err;
 				}
@@ -54,7 +54,7 @@ module.exports = function (src, options) {
 		}).catch(function (err) {
 			console.log(err);
 			// Return an error if something happened
-			cb(new gutil.PluginError('gulp-cordova-copyicons', err.message));
+			cb(new gutil.PluginError(gutil.colors.red('gulp-cordova-copyicons', err.message));
 		});
 	});
 

@@ -54,7 +54,9 @@ The target platform to copy icons to.
 
 ## Related
 
-See [`gulp-cordova`](https://github.com/SamVerschueren/gulp-cordova) for the full list of available packages.
+This package is intended to be use with Sam Verschueren's [`gulp-cordova`](https://github.com/SamVerschueren/gulp-cordova)
+
+Click the link above for the full list of Sam's available packages.
 
 ## License
 
