@@ -1,6 +1,6 @@
 # gulp-cordova-copyicons
 
-> Copy directory contents (i.e. res icons) to a cordova project platform res directory.
+> Copy directory contents (i.e. your pre-staged res/drawable-* icons) to a cordova project platform res directory.
 
 ## Installation
 
@@ -15,7 +15,10 @@ var create = require('gulp-cordova-create');
 var copyicons = require('gulp-cordova-copyicons');
 
 gulp.task('build', function () {
-    var src = 'path/to/icons';
+    // get the src dir absolute path
+    var src = path.resolve('.', './resources/res');
+
+    // pass the target platform as an option
     var options = { platform: 'android' };
 
     return gulp.src('dist')
@@ -24,12 +27,7 @@ gulp.task('build', function () {
 });
 ```
 
-This will copy all content in the source directory to the platform specific
-res directory. If the platform has not been created it will be created by this call before the contents are copied.
-
-NOTE: It is expected that the directory you are copying from has the correct directory structure for the target platform.
-
-### Options
+This will copy all content in the source directory (specified as an absolute path or a path relative to the cordova build folder) to the platform specific res directory. If the platform has not been created it will be created by this call before the contents are copied.
 
 If you do not pass options the platform will default to android.
 
@@ -39,11 +37,25 @@ This will execute the following command
 $ cordova platform add android
 ```
 
-## API
+**NOTE:** It is expected that the directory you are copying from has the correct directory structure for the target platform.
 
-### copyicons(src, [options])
+### Params
 
-#### options
+##### src
+
+Type: `string`
+
+This parameter is the source directory that should hold all your drawable-* directories to be copied. The path should be relative to the project root. So for <my project dir>/resources/res, pass in resources/res.
+
+##### options
+
+Type: `object`
+
+#### Options
+
+```js
+var options = { platform: 'android' };
+```
 
 ##### platform
 
