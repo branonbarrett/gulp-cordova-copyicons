@@ -54,7 +54,7 @@ module.exports = function (src, options) {
 		}).catch(function (err) {
 			console.log(err);
 			// Return an error if something happened
-			cb(new gutil.PluginError(gutil.colors.red('gulp-cordova-copyicons', err.message));
+			cb(new gutil.PluginError(gutil.colors.red('gulp-cordova-copyicons', err.message)));
 		});
 	});
 
